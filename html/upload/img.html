@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--  
+            absolute link 
+https://images.unsplash.com/photo-1692264438297-e1e38a867d02?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmVhdXRpZnVsJTIwbGFuZHNjYXBlfGVufDB8fDB8fHww
+
+                    http://www.google.com/abc/q.html
+            relative link 
+                        /abc/q.html
+    -->
+
+    <!-- 
+
+        case 1 
+                both html and image file are in same folder/directory 
+     <img
+      width="200"
+      height="200"
+      src="./2.jpg"
+      alt=""
+    />
+     -->
+
+    <!-- 
+    case 2 
+            image file in inside any folder and html file is outside that folder 
+
+             <img
+      width="200"
+      height="200"
+      src="./upload/1.jpg"
+      alt="abc"
+    />
+
+    -->
+
+
+<!-- 
+    case 3 
+            html file is inside any folder and image files is outside that folder 
+ -->
+
+    <img width="200" height="200" src="../1.jpg" alt="abc" />
+
+
+</body>
+</html>
