@@ -56,3 +56,11 @@ transition:all  0.75s ease-in-out ;
 header > nav > ul > li:hover > a {
     color: black;
 }
+
+/* li:hover{
+    color: greenyellow;
+}
+
+a{
+    text-decoration: none;
+} */

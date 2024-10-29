@@ -1,0 +1,35 @@
+/* .positions > h1 {
+  border: 1px solid black;
+  position: absolute;
+  top: 0px;
+
+}
+
+.positions{
+    border: 1px solid red;
+    position: relative;
+} 
+ */
+
+/* offset (top bottom left and right)
+
+*/
+
+.positions {
+  border: 1px solid red;
+  position: relative;
+}
+
+.sticky {
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  /* width: 60%; */
+
+  text-align: center;
+  background-color: black;
+  color: white;
+  z-index: 9999999999999;
+  transition: all 1s ease-in-out;
+}
+
