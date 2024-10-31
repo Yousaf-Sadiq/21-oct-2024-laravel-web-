@@ -1,17 +1,24 @@
 .grid-container {
   background-color: brown;
   display: grid;
-  justify-content: center;
-  grid-template-columns: 150px 200px 150px;
+  /* justify-content: center; */
+  grid-template-columns: repeat(3, minmax(min-content, max-content));
+
   grid-template-rows: 100px 100px;
+
+  gap: 5px;
 }
 
+* {
+  box-sizing: border-box;
+}
 .child {
-  padding: 1rem;
+    overflow-y: scroll;
   background-color: rebeccapurple;
   color: white;
+  padding: 1rem;
   font-weight: bolder;
-
+  /* margin: 5px; */
   border: 1px solid black;
 }
 
