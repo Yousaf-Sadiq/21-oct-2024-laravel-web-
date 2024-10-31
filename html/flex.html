@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css Flexbox</title>
+    <style>
+      .flex-container {
+        border: 3px solid #000;
+        height: 60vh;
+        width: 50vw;
+        margin: 0 auto;
+        display: flex;
+      }
+      .item {
+        width: 50px;
+        height: 50px;
+        background-color: crimson;
+        border: 2px solid cornflowerblue;
+      }
+      .item1 {
+        flex-shrink: 1;
+        order: 2;
+        align-self: self-end;
+    }
+    .item2 {
+        flex-grow: 1;
+        order: 1;
+        align-self: center;
+    }
+    .item3 {
+        flex-shrink: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        Parent's properties
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-item: center;
+        align-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        
+        Child's properties
+        flex-grow: 1;
+        flex-shrink: 1;
+        order: 1;
+        align-self: center;
+     -->
+    <div class="flex-container">
+      <div class="item item1">1</div>
+      <div class="item item2">2</div>
+      <div class="item item3">3</div>
+      <!-- <div class="item item2">2</div>
+      <div class="item item3">3</div>
+      <div class="item item1">1</div>
+      <div class="item item2">2</div>
+      <div class="item item3">3</div>
+      <div class="item item1">1</div>
+      <div class="item item2">2</div>
+      <div class="item item3">3</div>
+      <div class="item item1">1</div>
+      <div class="item item2">2</div>
+      <div class="item item3">3</div> -->
+    </div>
+  </body>
+</html>
