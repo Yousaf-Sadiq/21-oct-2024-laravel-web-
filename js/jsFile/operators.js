@@ -61,8 +61,8 @@ sum = x + y;
 /**
  * =   saving value in variable
  * ==   compare value from different variable (to check equal value )
- *
- *  5 == "5"  T
+ * let o= 5;
+ *  5 === o  T
  *
  *  === compare value and dataType from different variable (to check equal value and dataTypes )
  *
