@@ -110,3 +110,54 @@ function calculator(operator = "+", operand1 = 0, operand2 = 0) {
   //   console.log(operator, operand1, operand2);
 }
 console.log(calculator("%", 2, 6));
+
+
+/**
+ *
+ * default function with no return
+ * default function with  return
+ *
+ * parametrize function with return
+ * parametrize function with no  return
+ *
+ * anonymous function with return
+ * anonymous function with no  return
+ *
+ *
+ * arrow function with return
+ * arrow function with no return
+ */
+let t = 0;
+
+function SUM(x = 0, y = 0) {
+  let a = x,
+    b = y;
+
+  let sum = a + b;
+  t = 10;
+  return sum;
+}
+
+console.log(t);
+
+let a = SUM();
+
+console.log(t);
+console.log(a);
+
+let q = function () {
+  console.log("testing ");
+};
+
+function EVenOdd(n = 0) {
+  let a = "ODD";  // by default 
+  
+  if (n % 2 == 0) {
+    a = "EVEN";
+  }
+
+  return a;
+}
+
+
+console.log(EVenOdd(4));
