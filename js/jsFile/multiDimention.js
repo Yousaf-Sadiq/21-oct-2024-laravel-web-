@@ -30,21 +30,21 @@ let a_range = a.length - 1; //7
 
 let output = "";
 
-for (let row = 0; row <= a_range; row++) {
-  if (typeof a[row] == "object") {
-    for (let col = 0; col < a[row].length; col++) {
-      //   console.log(a[row][col]);
+// for (let row = 0; row <= a_range; row++) {
+//   if (typeof a[row] == "object") {
+//     for (let col = 0; col < a[row].length; col++) {
+//       //   console.log(a[row][col]);
 
-      output += `${a[row][col]} <br>`;
-    }
-  } else {
-    // console.log(a[row]);
+//       output += `${a[row][col]} <br>`;
+//     }
+//   } else {
+//     // console.log(a[row]);
 
-    output += `${a[row]} <br>`;
-  }
-}
+//     output += `${a[row]} <br>`;
+//   }
+// }
 
-document.write(output);
+// document.write(output);
 
 // for (let row = 7; row >= 1; row--) {
 
@@ -60,7 +60,7 @@ document.write(output);
 // document.write(output);
 //  selection and sort
 //  selection and check
-// Find the same numbers from the following multidimensional array
+// Find the same numbers f  wing multidimensional array
 let multiArr = [
   [
     [12, 32, 13, 34],
@@ -111,25 +111,68 @@ console.log(multiArr);
 
 let outerMostArray = multiArr.length - 1; // range
 
-let twoDArray = [];
-
-for (let q = 0; q <= outerMostArray; q++) {
-  for (let j = 0; j < multiArr[q].length; j++) {
-    twoDArray.push(multiArr[q][j]);
-  }
-}
-
 let ONeDArray = [];
 
-let twoDlength = twoDArray.length - 1;
+//  3d to 1d
+for (let row = 0; row <= outerMostArray; row++) {
+  for (let col = 0; col < multiArr[row].length; col++) {
+    for (let subCol = 0; subCol < multiArr[row][col].length; subCol++) {
+      ONeDArray.push(multiArr[row][col][subCol]);
+    }
+  }
+}
 
-for (let q = 0; q <= twoDlength; q++) {
+console.log(ONeDArray);
 
 
-  for (let j = 0; j < twoDArray[q].length; j++) {
-    ONeDArray.push(twoDArray[q][j]);
+
+let commonNumbers = [];
+
+let count = {};
+
+
+for (let selection = 0; selection < ONeDArray.length; selection++) {
+  for (let check = 0; check < ONeDArray.length; check++) {
+
+    if (selection == check) {
+
+    } else if (ONeDArray[selection] == ONeDArray[check]) {
+      let a = ONeDArray[selection];
+
+      if (count[a]) {
+        // console.log(a);
+        // console.log(count);
+        count[a]++;
+      } else {
+        count[a] = 1;
+      }
+    }
   }
 }
 
 
-console.log(ONeDArray);
+
+
+console.log(count);
+// let twoDArray = [];
+
+// //  converting 3d to 2d
+// for (let q = 0; q <= outerMostArray; q++) {
+//   for (let j = 0; j < multiArr[q].length; j++) {
+//     twoDArray.push(multiArr[q][j]);
+//   }
+// }
+
+// let ONeDArray = [];
+
+// let twoDlength = twoDArray.length - 1;
+
+// //  converting 2d to 1d
+// for (let q = 0; q <= twoDlength; q++) {
+
+//   for (let j = 0; j < twoDArray[q].length; j++) {
+//     ONeDArray.push(twoDArray[q][j]);
+//   }
+// }
+
+// console.log(ONeDArray);
