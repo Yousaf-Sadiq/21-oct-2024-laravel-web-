@@ -130,7 +130,7 @@ let commonNumbers = [];
 
 let count = {};
 
-
+//  selection and check numbers 
 for (let selection = 0; selection < ONeDArray.length; selection++) {
   for (let check = 0; check < ONeDArray.length; check++) {
 
@@ -154,6 +154,90 @@ for (let selection = 0; selection < ONeDArray.length; selection++) {
 
 
 console.log(count);
+
+for (const w in count) {
+
+  if (count[w] > 0) {
+      commonNumbers.push(w)
+  }
+}
+
+
+console.log(commonNumbers);
+
+
+
+function display(){
+  console.log("testing");
+}
+
+let q = [1,23,43,543,432,432,432,123,1,3215,43,765]
+
+// console.log(q[5]);
+
+
+let t = {
+  name:"XYZ",
+  email:"XYZ@gmail.com",
+  display:function(){
+  //  console.log("inside obj testing");
+   return "inside obj testing";
+  }
+}
+
+console.log(t.display());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function person(id,name){
+
+
+  
+  return true;
+}
+
+
+
+let id= 5;
+let name ="XYZ";
+
+let  persons = person(id,name)
+
+console.log(persons);
+
+
+
+/**
+    scope 
+      local variable 
+      global variable
+
+    return 
+    naming convention memory 
+      */
+
+
+
+
+
+
+
+
+
+
+
+
 // let twoDArray = [];
 
 // //  converting 3d to 2d
