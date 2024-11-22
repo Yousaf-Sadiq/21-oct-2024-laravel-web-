@@ -1,0 +1,45 @@
+/* dom1  */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 15px;
+  padding: 2rem;
+  margin: 0px auto;
+  width: 75%;
+  position: relative;
+}
+
+form > div {
+  position: relative;
+}
+form > div > input {
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  width: 100%;
+  border-bottom: 0.5px solid lightgray;
+  transition: all 0.75s  ease-in-out;
+}
+
+form > div > input:focus {
+
+  border-bottom: 1px solid black;
+}
+
+form > div> label{
+position: absolute;
+bottom: 7px;
+color: lightgray;
+
+z-index: -1;
+transition: all 0.75s  ease-in-out;
+
+}
+
+
+form > div > input:focus ~ label{
+    top: -10px;
+    z-index: 1;
+    color: black;
+}
