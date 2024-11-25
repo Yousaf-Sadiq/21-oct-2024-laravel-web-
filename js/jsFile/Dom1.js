@@ -1,5 +1,5 @@
 // NODE TREE
-//  render
+// rendering Html in js 
 
 /**
  method 1
@@ -11,7 +11,6 @@ let form = document.forms["abc"];
 //  event listner
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-
   e.stopPropagation();
   console.log("ok");
 

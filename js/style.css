@@ -1,45 +1,55 @@
-/* dom1  */
 form {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  gap: 15px;
-  padding: 2rem;
-  margin: 0px auto;
-  width: 75%;
-  position: relative;
-}
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 15px;
+    padding: 2rem;
+    margin: 0px auto;
+    width: 75%;
+    position: relative;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background: #fff;
 
-form > div {
-  position: relative;
-}
-form > div > input {
-  padding: 0.5rem;
-  border: none;
-  outline: none;
-  width: 100%;
-  border-bottom: 0.5px solid lightgray;
-  transition: all 0.75s  ease-in-out;
-}
-
-form > div > input:focus {
-
-  border-bottom: 1px solid black;
-}
-
-form > div> label{
-position: absolute;
-bottom: 7px;
-color: lightgray;
-
-z-index: -1;
-transition: all 0.75s  ease-in-out;
-
-}
-
-
-form > div > input:focus ~ label{
-    top: -10px;
+  }
+  
+  form > div {
+    position: relative;
+  }
+  
+  form > div > input {
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    background: none;
+    font-size: 1rem;
+    transition: border-bottom 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  form > div > input:focus {
+    border-bottom: 1.5px solid #333;
+    transform: scale(1.02);
+  }
+  
+  form > div > label {
+    position: absolute;
+    left: 0;
+    bottom: 0.5rem;
+    font-size: 1rem;
+    color: lightgray;
+    /* z-index: -1; */
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+  }
+  
+  form > div > input:focus ~ label,
+  form > div > input:not(:placeholder-shown) ~ label {
+    transform: translateY(-1.5rem);
+    font-size: 0.9rem;
     z-index: 1;
-    color: black;
-}
+    color: #333;
+  }
+  
